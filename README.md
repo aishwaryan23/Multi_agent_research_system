@@ -15,6 +15,18 @@ The system coordinates specialized AI agents to search the web, identify relevan
 - 🤖 Uses specialized agents for separate research tasks
 - 🧩 Implements a modular and extensible pipeline architecture
 
+## Deployment secrets
+
+For local development, create a `.env` file with `MISTRAL_API_KEY` and `TAVILY_API_KEY`.
+For Streamlit Cloud, add those same names under **Manage app > Settings > Secrets**:
+
+```toml
+MISTRAL_API_KEY = "your-mistral-key"
+TAVILY_API_KEY = "your-tavily-key"
+```
+
+If an API key has been exposed publicly, revoke it and create a replacement before deploying.
+
 ## 🏗️ Architecture
 
 ```text

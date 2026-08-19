@@ -3,11 +3,14 @@ from langchain_mistralai import ChatMistralAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from tools import web_search, scrape_url
-from dotenv import load_dotenv
-load_dotenv()
+from config import get_secret
 
 #model setup
-llm = ChatMistralAI(model = "mistral-medium-latest", temperature=0)
+llm = ChatMistralAI(
+    model="mistral-medium-latest",
+    temperature=0,
+    api_key=get_secret("MISTRAL_API_KEY"),
+)
 
 #search agents
 
