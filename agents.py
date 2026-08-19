@@ -7,7 +7,7 @@ from config import get_secret
 
 #model setup
 llm = ChatMistralAI(
-    model="mistral-medium-latest",
+    model="mistral-large-latest",
     temperature=0,
     api_key=get_secret("MISTRAL_API_KEY"),
 )
